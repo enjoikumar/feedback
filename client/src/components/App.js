@@ -11,8 +11,10 @@ const App = () => {
 		<div>
 			<BrowserRouter>
 				<div>
+					<Header />
 					<Route exact = {true} path = "/" component = {Landing} />
-					<Route path = "/surveys" component = {Dashboard} />
+					<Route exact path = "/surveys" component = {Dashboard} />
+					<Route path = "/surveys/new" component = {SurveyNew} />
 				</div>
 			</BrowserRouter>
 		</div>
@@ -20,3 +22,6 @@ const App = () => {
 };
 
 export default App;
+
+
+// exact = {true} and exact mean the same thing
